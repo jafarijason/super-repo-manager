@@ -1,9 +1,7 @@
 import { Args, Command, Flags } from '@oclif/core'
 import { srmFileName, srmFilePath } from '../../functions/srmFile';
 import fs from 'fs-extra';
-import path from 'path';
-import util from 'util';
-
+import { srmGenerate } from '../../functions/srmGenerate';
 
 
 
@@ -27,8 +25,7 @@ export default class Init extends Command {
     if (fs.existsSync(srmFilePath) && !flags.force) {
       return this.error(`A ${srmFileName} file already exists in ${process.cwd()}. Use --force to override.`)
     }
+    await srmGenerate(this)
 
-    console.log(args)
-    console.log(flags)
   }
 }

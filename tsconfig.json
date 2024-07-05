@@ -10,8 +10,6 @@
     "moduleResolution": "node", // Use Node.js module resolution
     "baseUrl": "./src",
     "paths": {
-      "@functions/*": ["./functions/*"],
-      "@srm-root/*": ["../*"]
     },
     "resolveJsonModule": true
   },

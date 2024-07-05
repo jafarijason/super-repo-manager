@@ -15,6 +15,7 @@
     "@oclif/plugin-not-found": "^3.2.8",
     "@oclif/plugin-plugins": "^5",
     "fs-extra": "^11.2.0",
+    "js-yaml": "^4.1.0",
     "path": "^0.12.7",
     "util": "^0.12.5"
   },
@@ -69,7 +70,7 @@
     "prepack": "oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md",
-    "prepublish": "yarn build && yarn prepack && yarn prepack && git add . && yarn version"
+    "pre-publish": "yarn build && yarn prepack && yarn prepack && git add . && yarn version"
   },
   "types": "dist/index.d.ts"
 }
