@@ -7,7 +7,7 @@ const hook: Hook<'prerun'> = async function (opts) {
   const srmObj = await currentSrmFileObj()
   if (srmObj.version !== srmVersion) {
     this.warn(`srm version is ${srmVersion} and it is not match with your workspace version ${srmObj.version}`)
-    this.warn(`To address that run 'srm update version'`)
+    this.warn(`To address that run 'srm update -v'`)
   }
   // srmVersion
   // console.log(opts.Command.flags)

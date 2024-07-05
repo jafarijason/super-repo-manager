@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager-tmp
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager-tmp/1.0.11 darwin-arm64 node-v20.13.1
+super-repo-manager-tmp/1.0.12 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -42,6 +42,7 @@ USAGE
 * [`srm plugins uninstall [PLUGIN]`](#srm-plugins-uninstall-plugin)
 * [`srm plugins unlink [PLUGIN]`](#srm-plugins-unlink-plugin)
 * [`srm plugins update`](#srm-plugins-update)
+* [`srm update`](#srm-update)
 * [`srm version`](#srm-version)
 
 ## `srm autocomplete [SHELL]`
@@ -113,7 +114,7 @@ EXAMPLES
   $ srm init
 ```
 
-_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.11/src/commands/init/index.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.12/src/commands/init/index.ts)_
 
 ## `srm plugins`
 
@@ -404,6 +405,26 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.3/src/commands/plugins/update.ts)_
 
+## `srm update`
+
+update srm
+
+```
+USAGE
+  $ srm update [-v]
+
+FLAGS
+  -v, --version
+
+DESCRIPTION
+  update srm
+
+EXAMPLES
+  $ srm update
+```
+
+_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.12/src/commands/update/index.ts)_
+
 ## `srm version`
 
 srm version
@@ -422,5 +443,5 @@ EXAMPLES
   $ srm version
 ```
 
-_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.11/src/commands/version/index.ts)_
+_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.12/src/commands/version/index.ts)_
 <!-- commandsstop -->
