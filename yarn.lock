@@ -1032,6 +1032,16 @@
     wordwrap "^1.0.0"
     wrap-ansi "^7.0.0"
 
+"@oclif/plugin-autocomplete@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-autocomplete/-/plugin-autocomplete-3.1.5.tgz#8f3a01f7e90b3daf4e15095635120ea379490901"
+  integrity sha512-NWKxA7uR0cHFVmtGKuRmK4imYrPmTV5mp8En5uLCjQgY3TYIKp9MDS5sxsF6jErziFdrbwDV4umMbQrjKAxdDQ==
+  dependencies:
+    "@oclif/core" "^4"
+    ansis "^3.2.0"
+    debug "^4.3.5"
+    ejs "^3.1.10"
+
 "@oclif/plugin-help@^6", "@oclif/plugin-help@^6.2.2":
   version "6.2.4"
   resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-6.2.4.tgz#9861e48da547e365275c6352f261ae9539229096"
@@ -1039,7 +1049,7 @@
   dependencies:
     "@oclif/core" "^4"
 
-"@oclif/plugin-not-found@^3.2.3":
+"@oclif/plugin-not-found@^3.2.3", "@oclif/plugin-not-found@^3.2.8":
   version "3.2.8"
   resolved "https://registry.yarnpkg.com/@oclif/plugin-not-found/-/plugin-not-found-3.2.8.tgz#3886806fc8c22a1c7419a2f5216cfca373f53407"
   integrity sha512-C2Iu/oZRNnGJct5DgB3Tg4DowNxpLugLb4hd/PQ18/UxQ/wz9mo0OYY6aFncn7If4gCsKiRUKSQA+3XXxMQi9w==

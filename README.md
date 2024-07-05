@@ -29,11 +29,11 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`srm autocomplete [SHELL]`](#srm-autocomplete-shell)
 * [`srm hello PERSON`](#srm-hello-person)
 * [`srm hello world`](#srm-hello-world)
-* [`srm hello1 PERSON`](#srm-hello1-person)
-* [`srm hello1 world`](#srm-hello1-world)
 * [`srm help [COMMAND]`](#srm-help-command)
+* [`srm init [FILE]`](#srm-init-file)
 * [`srm plugins`](#srm-plugins)
 * [`srm plugins add PLUGIN`](#srm-plugins-add-plugin)
 * [`srm plugins:inspect PLUGIN...`](#srm-pluginsinspect-plugin)
@@ -44,6 +44,37 @@ USAGE
 * [`srm plugins uninstall [PLUGIN]`](#srm-plugins-uninstall-plugin)
 * [`srm plugins unlink [PLUGIN]`](#srm-plugins-unlink-plugin)
 * [`srm plugins update`](#srm-plugins-update)
+
+## `srm autocomplete [SHELL]`
+
+Display autocomplete installation instructions.
+
+```
+USAGE
+  $ srm autocomplete [SHELL] [-r]
+
+ARGUMENTS
+  SHELL  (zsh|bash|powershell) Shell type
+
+FLAGS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+DESCRIPTION
+  Display autocomplete installation instructions.
+
+EXAMPLES
+  $ srm autocomplete
+
+  $ srm autocomplete bash
+
+  $ srm autocomplete zsh
+
+  $ srm autocomplete powershell
+
+  $ srm autocomplete --refresh-cache
+```
+
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v3.1.5/src/commands/autocomplete/index.ts)_
 
 ## `srm hello PERSON`
 
@@ -87,48 +118,6 @@ EXAMPLES
 
 _See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello/world.ts)_
 
-## `srm hello1 PERSON`
-
-Say hello
-
-```
-USAGE
-  $ srm hello1 PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ srm hello1 friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [src/commands/hello1/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello1/index.ts)_
-
-## `srm hello1 world`
-
-Say hello world
-
-```
-USAGE
-  $ srm hello1 world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ srm hello1 world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [src/commands/hello1/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello1/world.ts)_
-
 ## `srm help [COMMAND]`
 
 Display help for srm.
@@ -148,6 +137,30 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.4/src/commands/help.ts)_
+
+## `srm init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ srm init [FILE] [-f] [-n <value>]
+
+ARGUMENTS
+  FILE  file to read
+
+FLAGS
+  -f, --force
+  -n, --name=<value>  name to print
+
+DESCRIPTION
+  describe the command here
+
+EXAMPLES
+  $ srm init
+```
+
+_See code: [src/commands/init.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/init.ts)_
 
 ## `srm plugins`
 
