@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager/1.0.0 darwin-arm64 node-v20.13.1
+super-repo-manager/1.0.1 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -65,7 +65,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.0/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.1/src/commands/hello/index.ts)_
 
 ## `srm hello world`
 
@@ -83,7 +83,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.0/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.1/src/commands/hello/world.ts)_
 
 ## `srm help [COMMAND]`
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
 (async () => {
