@@ -16,11 +16,11 @@ Effortlessly manage Git submodules, subtrees, and metadata with ease using this 
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g super-repo-manager
+$ npm install -g super-repo-manager-tmp
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager/1.0.1 darwin-arm64 node-v20.13.1
+super-repo-manager-tmp/1.0.2 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -31,6 +31,8 @@ USAGE
 <!-- commands -->
 * [`srm hello PERSON`](#srm-hello-person)
 * [`srm hello world`](#srm-hello-world)
+* [`srm hello1 PERSON`](#srm-hello1-person)
+* [`srm hello1 world`](#srm-hello1-world)
 * [`srm help [COMMAND]`](#srm-help-command)
 * [`srm plugins`](#srm-plugins)
 * [`srm plugins add PLUGIN`](#srm-plugins-add-plugin)
@@ -65,7 +67,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.1/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello/index.ts)_
 
 ## `srm hello world`
 
@@ -83,7 +85,49 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.1/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello/world.ts)_
+
+## `srm hello1 PERSON`
+
+Say hello
+
+```
+USAGE
+  $ srm hello1 PERSON -f <value>
+
+ARGUMENTS
+  PERSON  Person to say hello to
+
+FLAGS
+  -f, --from=<value>  (required) Who is saying hello
+
+DESCRIPTION
+  Say hello
+
+EXAMPLES
+  $ srm hello1 friend --from oclif
+  hello friend from oclif! (./src/commands/hello/index.ts)
+```
+
+_See code: [src/commands/hello1/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello1/index.ts)_
+
+## `srm hello1 world`
+
+Say hello world
+
+```
+USAGE
+  $ srm hello1 world
+
+DESCRIPTION
+  Say hello world
+
+EXAMPLES
+  $ srm hello1 world
+  hello world! (./src/commands/hello/world.ts)
+```
+
+_See code: [src/commands/hello1/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello1/world.ts)_
 
 ## `srm help [COMMAND]`
 
