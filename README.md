@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager-tmp
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager-tmp/1.0.3 darwin-arm64 node-v20.13.1
+super-repo-manager-tmp/1.0.4 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -30,10 +30,8 @@ USAGE
 # Commands
 <!-- commands -->
 * [`srm autocomplete [SHELL]`](#srm-autocomplete-shell)
-* [`srm hello PERSON`](#srm-hello-person)
-* [`srm hello world`](#srm-hello-world)
 * [`srm help [COMMAND]`](#srm-help-command)
-* [`srm init [FILE]`](#srm-init-file)
+* [`srm init init [FILE]`](#srm-init-init-file)
 * [`srm plugins`](#srm-plugins)
 * [`srm plugins add PLUGIN`](#srm-plugins-add-plugin)
 * [`srm plugins:inspect PLUGIN...`](#srm-pluginsinspect-plugin)
@@ -76,48 +74,6 @@ EXAMPLES
 
 _See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v3.1.5/src/commands/autocomplete/index.ts)_
 
-## `srm hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ srm hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ srm hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.3/src/commands/hello/index.ts)_
-
-## `srm hello world`
-
-Say hello world
-
-```
-USAGE
-  $ srm hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ srm hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.3/src/commands/hello/world.ts)_
-
 ## `srm help [COMMAND]`
 
 Display help for srm.
@@ -138,13 +94,13 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.4/src/commands/help.ts)_
 
-## `srm init [FILE]`
+## `srm init init [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ srm init [FILE] [-f] [-n <value>]
+  $ srm init init [FILE] [-f] [-n <value>]
 
 ARGUMENTS
   FILE  file to read
@@ -157,10 +113,10 @@ DESCRIPTION
   describe the command here
 
 EXAMPLES
-  $ srm init
+  $ srm init init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.3/src/commands/init.ts)_
+_See code: [src/commands/init/init.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.4/src/commands/init/init.ts)_
 
 ## `srm plugins`
 
