@@ -4,8 +4,16 @@
     "module": "commonjs",
     "outDir": "dist",
     "rootDir": "src",
-    "strict": true,
-    "target": "es2022"
+    // "strict": true,
+    "target": "es2022",
+    "esModuleInterop": true, // Ensure compatibility with Node.js modules
+    "moduleResolution": "node", // Use Node.js module resolution
+    "baseUrl": "./src",
+    "paths": {
+      "@functions/*": ["./functions/*"],
+      "@srm-root/*": ["../*"]
+    },
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"]
 }

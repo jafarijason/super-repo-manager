@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager-tmp
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager-tmp/1.0.4 darwin-arm64 node-v20.13.1
+super-repo-manager-tmp/1.0.5 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -31,7 +31,7 @@ USAGE
 <!-- commands -->
 * [`srm autocomplete [SHELL]`](#srm-autocomplete-shell)
 * [`srm help [COMMAND]`](#srm-help-command)
-* [`srm init init [FILE]`](#srm-init-init-file)
+* [`srm init`](#srm-init)
 * [`srm plugins`](#srm-plugins)
 * [`srm plugins add PLUGIN`](#srm-plugins-add-plugin)
 * [`srm plugins:inspect PLUGIN...`](#srm-pluginsinspect-plugin)
@@ -42,6 +42,7 @@ USAGE
 * [`srm plugins uninstall [PLUGIN]`](#srm-plugins-uninstall-plugin)
 * [`srm plugins unlink [PLUGIN]`](#srm-plugins-unlink-plugin)
 * [`srm plugins update`](#srm-plugins-update)
+* [`srm version`](#srm-version)
 
 ## `srm autocomplete [SHELL]`
 
@@ -94,29 +95,25 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.4/src/commands/help.ts)_
 
-## `srm init init [FILE]`
+## `srm init`
 
-describe the command here
+initialize a new meta repo
 
 ```
 USAGE
-  $ srm init init [FILE] [-f] [-n <value>]
-
-ARGUMENTS
-  FILE  file to read
+  $ srm init [-f]
 
 FLAGS
   -f, --force
-  -n, --name=<value>  name to print
 
 DESCRIPTION
-  describe the command here
+  initialize a new meta repo
 
 EXAMPLES
-  $ srm init init
+  $ srm init
 ```
 
-_See code: [src/commands/init/init.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.4/src/commands/init/init.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.5/src/commands/init/index.ts)_
 
 ## `srm plugins`
 
@@ -406,4 +403,21 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.3/src/commands/plugins/update.ts)_
+
+## `srm version`
+
+srm version
+
+```
+USAGE
+  $ srm version
+
+DESCRIPTION
+  srm version
+
+EXAMPLES
+  $ srm version
+```
+
+_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.5/src/commands/version/index.ts)_
 <!-- commandsstop -->

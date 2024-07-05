@@ -1,6 +1,8 @@
 {
-    "cSpell.words": [
-        "oclif",
-        "postpack"
-    ]
+  "cSpell.words": ["oclif", "postpack"],
+  "search.useIgnoreFiles": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": ".prettierrc",
+  "editor.defaultColorDecorators": true
 }

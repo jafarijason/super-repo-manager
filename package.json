@@ -1,10 +1,11 @@
 {
   "name": "super-repo-manager-tmp",
   "description": "Effortlessly manage Git submodules, subtrees, and metadata with ease using this npm module.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Jason Jafari",
   "bin": {
-    "srm": "./bin/run.js"
+    "srm": "./bin/run.js",
+    "srmd": "./bin/dev.js"
   },
   "bugs": "https://github.com/https://github.com/jafarijason/super-repo-manager/issues",
   "dependencies": {
@@ -12,7 +13,10 @@
     "@oclif/plugin-autocomplete": "^3.1.5",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-not-found": "^3.2.8",
-    "@oclif/plugin-plugins": "^5"
+    "@oclif/plugin-plugins": "^5",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "@oclif/prettier-config": "^0.2.1",
@@ -64,7 +68,8 @@
     "posttest": "yarn lint",
     "prepack": "oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "version": "oclif readme && git add README.md",
+    "prepublish": "yarn build && yarn prepack && yarn prepack && git add . && yarn version"
   },
   "types": "dist/index.d.ts"
 }
