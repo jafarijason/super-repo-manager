@@ -22,7 +22,7 @@ export default class Init extends Command {
     const {args, flags} = await this.parse(Init)
 
     const name = flags.name ?? 'world'
-    this.log(`hello ${name} from /Users/jason/gitea/SARAVA/SARAVA/openSource/own/SuperRepo/super-repo-manager/src/commands/init.ts`)
+    this.log(`hello ${name} from /Users/jason/gitea/SARAVA/SARAVA/openSource/own/SuperRepo/super-repo-manager/src/commands/init/init.ts`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
     }

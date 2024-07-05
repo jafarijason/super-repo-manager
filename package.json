@@ -54,14 +54,12 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
     }
   },
   "repository": "https://github.com/jafarijason/super-repo-manager",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
+    "build:watch": "nodemon --watch ./src --exec 'shx rm -rf dist && tsc -b' --verbose --ext ts,js,mjs,cjs,json",
     "lint": "eslint . --ext .ts",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
