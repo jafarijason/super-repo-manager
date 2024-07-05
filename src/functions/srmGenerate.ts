@@ -21,8 +21,13 @@ const init = {
     },
     groups: {
         level1: {
-            description: 'group1 with access a, b, c project'
-        }
+            description: 'group1 with access a, b, c project',
+            projects: {}
+        },
+        level2: {
+            description: 'group2 with access a, b, c project',
+            projects: {}
+        },
     }
 }
 

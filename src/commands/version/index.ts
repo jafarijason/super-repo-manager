@@ -3,6 +3,7 @@ import { Args, Command, Flags } from '@oclif/core'
 
 
 export default class Version extends Command {
+  public static enableJsonFlag = true
   static override args = {}
 
   static override description = 'srm version'
@@ -14,7 +15,16 @@ export default class Version extends Command {
   static override flags = {
   }
 
-  public async run(): Promise<void> {
+  public async run() {
+    const { args, flags } = await this.parse(Version)
+
+    if (flags.json) {
+      return { srmVersion }
+    }
+    this.debug(srmVersion)
     this.log(srmVersion)
   }
 }
+
+
+

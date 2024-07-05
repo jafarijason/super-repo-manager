@@ -410,7 +410,10 @@ srm version
 
 ```
 USAGE
-  $ srm version
+  $ srm version [--json]
+
+GLOBAL FLAGS
+  --json  Format output as json.
 
 DESCRIPTION
   srm version

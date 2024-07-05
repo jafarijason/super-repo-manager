@@ -40,6 +40,7 @@
     "node": ">=18.0.0"
   },
   "files": [
+    "/theme.json",
     "/bin",
     "/dist",
     "/oclif.manifest.json"
@@ -58,7 +59,14 @@
       "@oclif/plugin-*"
     ],
     "topicSeparator": " ",
-    "topics": {}
+    "topics": {},
+    "theme": "theme.json",
+    "hooks": {
+      "prerun": [
+        "./dist/hooks/prerun/versionCheck"
+      ],
+      "preparse": "./dist/hooks/preparse/versionCheck1"
+    }
   },
   "repository": "https://github.com/jafarijason/super-repo-manager",
   "scripts": {
