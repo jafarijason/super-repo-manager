@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager-tmp
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager-tmp/1.0.2 darwin-arm64 node-v20.13.1
+super-repo-manager-tmp/1.0.3 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -98,7 +98,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.3/src/commands/hello/index.ts)_
 
 ## `srm hello world`
 
@@ -116,7 +116,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.3/src/commands/hello/world.ts)_
 
 ## `srm help [COMMAND]`
 
@@ -160,7 +160,7 @@ EXAMPLES
   $ srm init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.2/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.3/src/commands/init.ts)_
 
 ## `srm plugins`
 
