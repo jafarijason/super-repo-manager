@@ -16,11 +16,11 @@ Effortlessly manage Git submodules, subtrees, and metadata with ease using this 
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g super-repo-manager-tmp
+$ npm install -g super-repo-manager
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager-tmp/1.0.16 darwin-arm64 node-v20.13.1
+super-repo-manager/1.0.17 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -42,6 +42,8 @@ USAGE
 * [`srm plugins uninstall [PLUGIN]`](#srm-plugins-uninstall-plugin)
 * [`srm plugins unlink [PLUGIN]`](#srm-plugins-unlink-plugin)
 * [`srm plugins update`](#srm-plugins-update)
+* [`srm repo [ACTION]`](#srm-repo-action)
+* [`srm repo add`](#srm-repo-add)
 * [`srm update`](#srm-update)
 * [`srm version`](#srm-version)
 
@@ -114,7 +116,7 @@ EXAMPLES
   $ srm init
 ```
 
-_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.16/src/commands/init/index.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.17/src/commands/init/index.ts)_
 
 ## `srm plugins`
 
@@ -405,6 +407,42 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.3/src/commands/plugins/update.ts)_
 
+## `srm repo [ACTION]`
+
+```
+USAGE
+  $ srm repo [ACTION]
+
+ARGUMENTS
+  ACTION  add|remove|update repository
+```
+
+_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.17/src/commands/repo/index.ts)_
+
+## `srm repo add`
+
+add child repository
+
+```
+USAGE
+  $ srm repo add -n <value> -p <value> -u <value> -s <value> -c <value>
+
+FLAGS
+  -c, --current-branch=<value>  (required)
+  -n, --repo-name=<value>       (required)
+  -p, --path=<value>            (required)
+  -s, --source-branch=<value>   (required)
+  -u, --repo-url=<value>        (required)
+
+DESCRIPTION
+  add child repository
+
+EXAMPLES
+  $ srm repo add
+```
+
+_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.17/src/commands/repo/add.ts)_
+
 ## `srm update`
 
 update srm
@@ -423,7 +461,7 @@ EXAMPLES
   $ srm update
 ```
 
-_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.16/src/commands/update/index.ts)_
+_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.17/src/commands/update/index.ts)_
 
 ## `srm version`
 
@@ -443,5 +481,5 @@ EXAMPLES
   $ srm version
 ```
 
-_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.16/src/commands/version/index.ts)_
+_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.17/src/commands/version/index.ts)_
 <!-- commandsstop -->
