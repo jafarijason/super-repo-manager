@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager/1.0.20 darwin-arm64 node-v20.13.1
+super-repo-manager/1.0.21 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -116,7 +116,7 @@ EXAMPLES
   $ srm init
 ```
 
-_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.20/src/commands/init/index.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.21/src/commands/init/index.ts)_
 
 ## `srm plugins`
 
@@ -417,7 +417,7 @@ ARGUMENTS
   ACTION  add|remove|update repository
 ```
 
-_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.20/src/commands/repo/index.ts)_
+_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.21/src/commands/repo/index.ts)_
 
 ## `srm repo add`
 
@@ -441,7 +441,7 @@ EXAMPLES
   $ srm repo add
 ```
 
-_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.20/src/commands/repo/add.ts)_
+_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.21/src/commands/repo/add.ts)_
 
 ## `srm update`
 
@@ -461,7 +461,7 @@ EXAMPLES
   $ srm update
 ```
 
-_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.20/src/commands/update/index.ts)_
+_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.21/src/commands/update/index.ts)_
 
 ## `srm version`
 
@@ -481,5 +481,5 @@ EXAMPLES
   $ srm version
 ```
 
-_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.20/src/commands/version/index.ts)_
+_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.21/src/commands/version/index.ts)_
 <!-- commandsstop -->
