@@ -42,7 +42,7 @@ const hook: Hook<'prerun'> = async function (opts) {
         name: gitUserName,
         email: gitUserEmail,
         groupsInclude: [],
-        projectsInclude: []
+        reposInclude: []
       }
     )
     await updateSrmFile(srmObj)

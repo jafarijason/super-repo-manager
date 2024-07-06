@@ -9,12 +9,12 @@ import { srmFileName, srmFilePath } from "./srmFile";
 
 const init = {
     version: srmVersion,
-    projects: {},
+    repos: {},
     users: {},
     groups: {
-        allProjects: {
-            description: 'group allProjects to access all projects',
-            projects: {}
+        all: {
+            description: 'group all to access all repos',
+            repos: {}
         }
     }
 }
