@@ -26,7 +26,7 @@ export default class RepoAdd extends Command {
 
     const [, srmObj] = await Promise.all([
       bashRunAndReturn({
-        command: `rm -rf ${flags["relative-path"]}/${flags["repo-name"]} ; mkdir -p ${flags["relative-path"]}`
+        command: `rm -rf ${flags["relative-path"]}/${flags["repo-name"]} ; mkdir -p ${flags["relative-path"]} ; echo "${flags["relative-path"]}/${flags["repo-name"]}" >> .gitignore`
       }),
       currentSrmFileObj()
     ])

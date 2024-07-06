@@ -1,0 +1,18 @@
+version: 1.0.18
+repos:
+  test1:
+    repo-name: test1
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source-branch: main
+    current-branch: main
+users:
+  me__jasonjafari-com:
+    name: Jason Jafari
+    email: me@jasonjafari.com
+    groupsInclude: []
+    reposInclude: []
+groups:
+  all:
+    description: group all to access all repos
+    repos: {}
