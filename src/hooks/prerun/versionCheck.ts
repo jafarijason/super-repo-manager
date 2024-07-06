@@ -34,7 +34,7 @@ const hook: Hook<'prerun'> = async function (opts) {
     this.warn(`To address that run 'srm update -v'`)
   }
 
-  if (!_.get(srmObj, `users[${srmUserName}]`)) {
+  if (srmObj.version && !_.get(srmObj, `users[${srmUserName}]`)) {
     _.set(
       srmObj,
       `users[${srmUserName}]`,

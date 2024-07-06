@@ -1,7 +1,7 @@
 {
   "name": "super-repo-manager-tmp",
   "description": "Effortlessly manage Git submodules, subtrees, and metadata with ease using this npm module.",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "author": "Jason Jafari",
   "bin": {
     "srm": "./bin/run.js",
