@@ -8,7 +8,7 @@ import { srmGenerate } from '../../functions/srmGenerate';
 export default class Init extends Command {
   static override args = {}
 
-  static override description = 'initialize a new meta repo'
+  static override description = 'initialize a new srm repo'
 
   static override examples = [
     '<%= config.bin %> <%= command.id %>',

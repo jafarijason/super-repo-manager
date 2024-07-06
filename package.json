@@ -1,7 +1,7 @@
 {
   "name": "super-repo-manager",
   "description": "Effortlessly manage Git submodules, subtrees, and metadata with ease using this npm module.",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "author": "Jason Jafari",
   "bin": {
     "srm": "./bin/run.js",
