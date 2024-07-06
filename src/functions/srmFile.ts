@@ -8,6 +8,9 @@ export const srmFileName = '.srm.yaml'
 export const srmFilePath = path.resolve(srmFileName);
 
 export const currentSrmFileObj = async () => {
+    if (!fs.existsSync(srmFilePath)) {
+        return {}
+    }
     const srmFileContent = await fs.readFile(srmFilePath, 'utf8');
     return YAML.load(srmFileContent)
 }
@@ -15,7 +18,8 @@ export const currentSrmFileObj = async () => {
 export const updateSrmFile = async (objToUpdate) => {
     const currentSrmFile = await currentSrmFileObj();
     _.merge(currentSrmFile, objToUpdate)
-    return await fs.writeFile(srmFilePath, YAML.dump(currentSrmFile, {}), "utf8")
+    await fs.writeFile(srmFilePath, YAML.dump(currentSrmFile, {}), "utf8")
+    return currentSrmFile
 }
 
 

@@ -10,24 +10,12 @@ import { srmFileName, srmFilePath } from "./srmFile";
 const init = {
     version: srmVersion,
     projects: {},
-    users: {
-        sampleUser: {
-            username: 'jasonjafari',
-            groups: [
-                'level1',
-                'level2',
-            ]
-        }
-    },
+    users: {},
     groups: {
-        level1: {
-            description: 'group1 with access a, b, c project',
+        allProjects: {
+            description: 'group allProjects to access all projects',
             projects: {}
-        },
-        level2: {
-            description: 'group2 with access a, b, c project',
-            projects: {}
-        },
+        }
     }
 }
 
