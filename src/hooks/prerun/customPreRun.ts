@@ -27,8 +27,13 @@ const hook: Hook<'prerun'> = async function (opts) {
     return
   }
 
+
   if (!srmObj.version) {
     this.warn(`it seems .srm.yaml file is not exist to your workspace, command to create 'srm init'`)
+    if (opts.Command.name !== 'Init') {
+      this.error(`Stopped!`)
+      process.exit(1)
+    }
   } else if (srmObj.version !== srmVersion) {
     this.warn(`srm version is ${srmVersion} and it is not match with your workspace version ${srmObj.version}`)
     this.warn(`To address that run 'srm update -v'`)
