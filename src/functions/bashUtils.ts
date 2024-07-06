@@ -1,7 +1,7 @@
 
 import util from 'util';
 import { exec } from 'child_process';
-
+import shelljs from 'shelljs';
 
 
 const newExec = util.promisify(exec);
@@ -25,5 +25,45 @@ export async function bashRunAndReturn({
     catch (err) {
         throw err;
     };
+
+}
+
+
+
+
+
+export async function bashRunAndShowLogsPromise({
+    command, noError = false
+}) {
+    await new Promise((resolve, reject) => {
+        const child = shelljs.exec(
+            command,
+            {
+                async: false,
+                silent: true
+            },
+            (code, stdout, stderr) => { }
+        );
+        child.stdout.on('data', function (data) {
+            if (data.includes(' SUCCESS: ')) {
+                console.log(`Success ${data}`);
+            } else {
+                console.log(data);
+            }
+        });
+        child.stderr.on('data', function (data) {
+            if (data.includes(' WARNING: ')) {
+                console.warn(data);
+            } else {
+                console.error(data);
+                if (!noError) {
+                    reject()
+                }
+            }
+        });
+        child.on('close', function (data) {
+            resolve(data);
+        });
+    });
 
 }

@@ -1,4 +1,8 @@
 import { Args, Command, Flags } from '@oclif/core'
+import { bashRunAndReturn, bashRunAndShowLogsPromise } from '../../functions/bashUtils';
+import chalk from 'chalk';
+import { currentSrmFileObj, updateSrmFile } from '../../functions/srmFile';
+import _ from 'lodash';
 
 export default class RepoAdd extends Command {
   static override args = {}
@@ -11,7 +15,7 @@ export default class RepoAdd extends Command {
 
   static override flags = {
     "repo-name": Flags.string({ char: 'n', required: true }),
-    "path": Flags.string({ char: 'p', required: true }),
+    "relative-path": Flags.string({ char: 'p', required: true }),
     "repo-url": Flags.string({ char: 'u', required: true }),
     "source-branch": Flags.string({ char: 's', required: true }),
     "current-branch": Flags.string({ char: 'c', required: true }),
@@ -20,10 +24,30 @@ export default class RepoAdd extends Command {
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(RepoAdd)
 
-    // const name = flags.name ?? 'world'
-    // this.log(`hello ${name} from /Users/jason/gitea/SARAVA/SARAVA/openSource/own/super-repo-manager/src/commands/repo/add.ts`)
-    // if (args.file && flags.force) {
-    //   this.log(`you input --force and --file: ${args.file}`)
-    // }
+    const [, srmObj] = await Promise.all([
+      bashRunAndReturn({
+        command: `rm -rf ${flags["relative-path"]}/${flags["repo-name"]} ; mkdir -p ${flags["relative-path"]}`
+      }),
+      currentSrmFileObj()
+    ])
+
+    await bashRunAndShowLogsPromise({
+      command: `git clone --branch  ${flags["current-branch"]} ${flags["repo-url"]} ${flags["relative-path"]}/${flags["repo-name"]}`,
+      noError: true
+    })
+
+    _.set(
+      srmObj,
+      `repos[${flags["repo-name"]}]`,
+      {
+        ...flags
+      }
+    )
+    await updateSrmFile(srmObj)
+
+    console.log(`repo ${flags["repo-name"]} with payload of ${JSON.stringify(flags)} is added to .srm.yaml`)
+
   }
 }
+
+
