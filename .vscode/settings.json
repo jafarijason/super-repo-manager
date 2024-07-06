@@ -1,5 +1,9 @@
 {
-  "cSpell.words": ["oclif", "postpack"],
+  "cSpell.words": [
+    "gitignorefile",
+    "oclif",
+    "postpack"
+  ],
   "search.useIgnoreFiles": false,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

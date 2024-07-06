@@ -3,6 +3,7 @@ import { bashRunAndReturn, bashRunAndShowLogsPromise } from '../../functions/bas
 import chalk from 'chalk';
 import { currentSrmFileObj, updateSrmFile } from '../../functions/srmFile';
 import _ from 'lodash';
+import { ensureLineExistInGitIgnore } from '../../functions/gitignoreUtils';
 
 export default class RepoAdd extends Command {
   static override args = {}
@@ -24,11 +25,14 @@ export default class RepoAdd extends Command {
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(RepoAdd)
 
-    const [, srmObj] = await Promise.all([
+
+
+    const [, srmObj, ,] = await Promise.all([
       bashRunAndReturn({
-        command: `rm -rf ${flags["relative-path"]}/${flags["repo-name"]} ; mkdir -p ${flags["relative-path"]} ; echo "\n${flags["relative-path"]}/${flags["repo-name"]}" >> .gitignore`
+        command: `rm -rf ${flags["relative-path"]}/${flags["repo-name"]} ; mkdir -p ${flags["relative-path"]}`
       }),
-      currentSrmFileObj()
+      currentSrmFileObj(),
+      ensureLineExistInGitIgnore(`${flags["relative-path"]}/${flags["repo-name"]}`),
     ])
 
     await bashRunAndShowLogsPromise({
@@ -43,6 +47,7 @@ export default class RepoAdd extends Command {
         ...flags
       }
     )
+    // console.log(srmObj)
     await updateSrmFile(srmObj)
 
     console.log(`repo ${flags["repo-name"]} with payload of ${JSON.stringify(flags)} is added to .srm.yaml`)

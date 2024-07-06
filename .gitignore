@@ -21,11 +21,7 @@ pnpm-lock.yaml
 
 .srm.yaml
 
-
-projects/test1
-
-projects/test1
-
-projects/test1
-
+# .srm.yaml
+projects/test2
+# .srm.yaml
 projects/test1
