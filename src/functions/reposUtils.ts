@@ -1,7 +1,10 @@
+import fs from 'fs-extra';
+import path from 'path';
 import { currentSrmFileObj, updateSrmFile } from './srmFile';
 import _ from 'lodash';
 
 import { SimpleGit, simpleGit } from 'simple-git';
+import { bashRunAndShowLogsPromise } from './bashUtils';
 
 
 export const getRepo = async (repo) => {
@@ -33,12 +36,24 @@ async function getLastCommitInRemoteBranch(git, { remote = null, branch }) {
 }
 
 
+export const doesDirectoryExist = (dirPath) => {
+    return fs.existsSync(path.resolve(dirPath));
+}
 
 export const ensureRepo = async (repo) => {
     const [repoObj] = await Promise.all([
         getRepo(repo),
     ])
     const repoPath = `${repoObj['relative-path']}/${repoObj['repo-name']}`
+
+    if (!doesDirectoryExist(repoPath)) {
+        console.log(`repository ${repo} is not exist on ${repoPath}, Cloning ...`)
+        await bashRunAndShowLogsPromise({
+            command: `git clone --branch  ${repoObj["current"].branch} ${repoObj["repo-url"]} ${repoObj["relative-path"]}/${repoObj["repo-name"]}`,
+            noError: true
+        })
+    }
+
     const git: SimpleGit = simpleGit(repoPath, { binary: 'git' });
 
     await git.fetch();
