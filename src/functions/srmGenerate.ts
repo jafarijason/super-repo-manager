@@ -14,7 +14,7 @@ const init = {
     groups: {
         all: {
             description: 'group all to access all repos',
-            repos: {}
+            repos: []
         }
     }
 }

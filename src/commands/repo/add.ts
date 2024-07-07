@@ -4,6 +4,7 @@ import chalk from 'chalk';
 import { currentSrmFileObj, updateSrmFile } from '../../functions/srmFile';
 import _ from 'lodash';
 import { ensureLineExistInGitIgnore } from '../../functions/gitignoreUtils';
+import { ensureRepo } from '../../functions/reposUtils';
 
 export default class RepoAdd extends Command {
   static override args = {}
@@ -40,17 +41,36 @@ export default class RepoAdd extends Command {
       noError: true
     })
 
+    const repoObj = {
+      "repo-name": flags["repo-name"],
+      "relative-path": flags["relative-path"],
+      "repo-url": flags["repo-url"],
+      source: {
+        branch: flags["source-branch"]
+      },
+      current: {
+        branch: flags["current-branch"]
+      },
+      local: {
+        branch: flags["current-branch"]
+      }
+    }
+
+    const groupsAllReposSet = new Set(_.get(srmObj, `groups.all.repos`, []))
+    groupsAllReposSet.add(flags["repo-name"])
+
     _.set(
       srmObj,
       `repos[${flags["repo-name"]}]`,
-      {
-        ...flags
-      }
+      repoObj
     )
+    _.set(srmObj, `groups.all.repos`, [...groupsAllReposSet])
     // console.log(srmObj)
     await updateSrmFile(srmObj)
 
     console.log(`repo ${flags["repo-name"]} with payload of ${JSON.stringify(flags)} is added to .srm.yaml`)
+
+    await ensureRepo(flags["repo-name"])
 
   }
 }

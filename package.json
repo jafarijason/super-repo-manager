@@ -21,6 +21,7 @@
     "lodash": "^4.17.21",
     "path": "^0.12.7",
     "shelljs": "^0.8.5",
+    "simple-git": "^3.25.0",
     "util": "^0.12.5"
   },
   "devDependencies": {
@@ -68,7 +69,8 @@
     "hooks": {
       "prerun": [
         "./dist/hooks/prerun/customPreRun"
-      ]
+      ],
+      "postrun": "./dist/hooks/postrun/customPostRun"
     }
   },
   "repository": "https://github.com/jafarijason/super-repo-manager",

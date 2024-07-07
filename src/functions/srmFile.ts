@@ -7,12 +7,19 @@ export const srmFileName = '.srm.yaml'
 
 export const srmFilePath = path.resolve(srmFileName);
 
-export const currentSrmFileObj = async () => {
+let currentSrmFileObjCached = {}
+
+export const currentSrmFileObj = async (cache = false) => {
+    if (cache && !_.isEmpty(currentSrmFileObjCached)) {
+        return currentSrmFileObjCached
+    }
     if (!fs.existsSync(srmFilePath)) {
         return {}
     }
     const srmFileContent = await fs.readFile(srmFilePath, 'utf8');
-    return YAML.load(srmFileContent)
+    const result = YAML.load(srmFileContent)
+    currentSrmFileObjCached = result
+    return result
 }
 
 export const updateSrmFile = async (objToUpdate) => {

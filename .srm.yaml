@@ -1,0 +1,50 @@
+version: 1.0.21
+repos:
+  test1:
+    repo-name: test1
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source-branch: main
+    current-branch: main
+    source:
+      branch: main
+      commit:
+        hash: d938950533d4c428fb4d2a78de2ab0bd212afef6
+        date: '2024-07-06T17:56:38-04:00'
+        message: v1.0.25
+        refs: 'HEAD -> main, tag: v1.0.25, origin/main, origin/HEAD'
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: d938950533d4c428fb4d2a78de2ab0bd212afef6
+        date: '2024-07-06T17:56:38-04:00'
+        message: v1.0.25
+        refs: 'HEAD -> main, tag: v1.0.25, origin/main, origin/HEAD'
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: d938950533d4c428fb4d2a78de2ab0bd212afef6
+        date: '2024-07-06T17:56:38-04:00'
+        message: v1.0.25
+        refs: 'HEAD -> main, tag: v1.0.25, origin/main, origin/HEAD'
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+users:
+  me__jasonjafari-com:
+    name: Jason Jafari
+    email: me@jasonjafari.com
+    groupsInclude:
+      - all
+    reposInclude: []
+groups:
+  all:
+    description: group all to access all repos
+    repos:
+      - test1
