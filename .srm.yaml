@@ -9,20 +9,20 @@ repos:
     source:
       branch: main
       commit:
-        hash: d938950533d4c428fb4d2a78de2ab0bd212afef6
-        date: '2024-07-06T17:56:38-04:00'
-        message: v1.0.25
-        refs: 'HEAD -> main, tag: v1.0.25, origin/main, origin/HEAD'
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: origin/main, origin/HEAD
         body: ''
         author_name: Jason Jafari
         author_email: me@jasonjafari.com
     current:
       branch: main
       commit:
-        hash: d938950533d4c428fb4d2a78de2ab0bd212afef6
-        date: '2024-07-06T17:56:38-04:00'
-        message: v1.0.25
-        refs: 'HEAD -> main, tag: v1.0.25, origin/main, origin/HEAD'
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: origin/main, origin/HEAD
         body: ''
         author_name: Jason Jafari
         author_email: me@jasonjafari.com
@@ -32,7 +32,347 @@ repos:
         hash: d938950533d4c428fb4d2a78de2ab0bd212afef6
         date: '2024-07-06T17:56:38-04:00'
         message: v1.0.25
-        refs: 'HEAD -> main, tag: v1.0.25, origin/main, origin/HEAD'
+        refs: 'HEAD -> main, tag: v1.0.25'
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test2:
+    repo-name: test2
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test3:
+    repo-name: test3
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test4:
+    repo-name: test4
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test5:
+    repo-name: test5
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test6:
+    repo-name: test6
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test7:
+    repo-name: test7
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test8:
+    repo-name: test8
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test9:
+    repo-name: test9
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test10:
+    repo-name: test10
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+  test11:
+    repo-name: test11
+    relative-path: projects
+    repo-url: git@github.com:jafarijason/super-repo-manager.git
+    source:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    current:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
+        body: ''
+        author_name: Jason Jafari
+        author_email: me@jasonjafari.com
+    local:
+      branch: main
+      commit:
+        hash: 623d40d1d668d3950a5aa3d0fd88b9a495386954
+        date: '2024-07-07T02:07:51-04:00'
+        message: WIP
+        refs: HEAD -> main, origin/main, origin/HEAD
         body: ''
         author_name: Jason Jafari
         author_email: me@jasonjafari.com
@@ -48,3 +388,13 @@ groups:
     description: group all to access all repos
     repos:
       - test1
+      - test2
+      - test3
+      - test4
+      - test5
+      - test6
+      - test7
+      - test8
+      - test9
+      - test10
+      - test11
