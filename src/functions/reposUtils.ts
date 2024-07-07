@@ -41,7 +41,6 @@ export const doesDirectoryExist = (dirPath) => {
 }
 
 export const ensureRepo = async (repo) => {
-    console.log(repo)
     const [repoObj] = await Promise.all([
         getRepo(repo),
     ])
