@@ -7,7 +7,7 @@
     "srm": "./bin/run.js",
     "srmd": "./bin/dev.js"
   },
-  "bugs": "https://github.com/https://github.com/jafarijason/super-repo-manager/issues",
+  "bugs": "https://github.com/jafarijason/super-repo-manager/issues",
   "dependencies": {
     "@oclif/core": "^4",
     "@oclif/plugin-autocomplete": "^3.1.5",
@@ -50,7 +50,7 @@
     "/dist",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/https://github.com/jafarijason/super-repo-manager",
+  "homepage": "https://github.com/jafarijason/super-repo-manager",
   "keywords": [
     "oclif"
   ],
