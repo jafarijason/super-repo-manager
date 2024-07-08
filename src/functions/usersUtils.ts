@@ -44,7 +44,7 @@ export const listOfUserReposSync = () => {
 
     const srmUserName = gitUserEmail.replace(/@/g, '__').replace(/\./g, '-')
     const listOfReposArray = listOfUserRepos(srmUserName)
-    console.log(listOfReposArray)
+    return listOfReposArray || []
 
     // return
 }

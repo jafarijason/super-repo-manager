@@ -22,7 +22,8 @@ export default class MyIndex extends Command {
   static override flags = {
     project: Flags.string({
       char: 'p',
-      options: ['a', 'b'],
+      //@ts-ignore
+      options: listOfUserReposSync(),
     }),
   }
 
