@@ -1,12 +1,40 @@
-super-repo-manager
+# Super Repo Manager (srm)
 =================
-
-Effortlessly manage Git submodules, subtrees, and metadata with ease using this npm module.
-
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/super-repo-manager.svg)](https://npmjs.org/package/super-repo-manager)
 [![Downloads/week](https://img.shields.io/npm/dw/super-repo-manager.svg)](https://npmjs.org/package/super-repo-manager)
+
+Effortlessly manage Git submodules, subtrees, and metadata with ease using this npm module.
+
+
+Super Repo Manager (SRM) is a powerful CLI tool designed to simplify the management of subrepositories within your projects. Whether you're managing multiple dependencies, collaborating with a team, or ensuring robust access controls, SRM streamlines the process with ease.
+
+=================
+## Features
+- Subrepository Management: Keep track of multiple repositories within your project using a single configuration file.
+- Role-Based Access Control (RBAC): Define users and groups with specific repository access permissions, ensuring project confidentiality and security.
+- Automated Synchronization: Automatically syncs the current repository branch across users' computers based on their access rights.
+- Open Source: Licensed under the MIT license, SRM encourages contributions and community involvement.
+
+### Getting Started
+Installation
+<br />
+Install srm globally via npm:
+
+```bash
+npm install -g super-repo-manager
+```
+
+### Contributing
+Contributions are welcome! Fork the repository, make your changes, and submit a pull request. Please ensure your code follows our coding standards and includes tests where applicable.
+
+### License
+SRM is licensed under the MIT License. See [LICENSE](https://github.com/jafarijason/super-repo-manager?tab=MIT-1-ov-file#readme) for details.
+
+### Support
+For support, bug reports, or feature requests, please [open an issue](https://github.com/jafarijason/super-repo-manager/issues).
+
 
 
 <!-- toc -->
