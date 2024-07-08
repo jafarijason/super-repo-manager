@@ -23,7 +23,7 @@ export default class Update extends Command {
     const { args, flags } = await this.parse(Update)
     if (flags.version) {
       this.log(`updating .srm.yaml with latest version`)
-      await updateSrmFileVersion()
+      updateSrmFileVersion()
     }
 
     // const name = flags.version ?? 'world'

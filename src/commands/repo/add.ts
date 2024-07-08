@@ -66,7 +66,7 @@ export default class RepoAdd extends Command {
     )
     _.set(srmObj, `groups.all.repos`, [...groupsAllReposSet])
     // console.log(srmObj)
-    await updateSrmFile(srmObj)
+    updateSrmFile(srmObj)
 
     console.log(`repo ${flags["repo-name"]} with payload of ${JSON.stringify(flags)} is added to .srm.yaml`)
 

@@ -16,7 +16,7 @@ const hook: Hook<'postrun'> = async function (opts: any) {
   // console.log(opts.Command.name)
   // console.log(opts)
   // process.stdout.write(`example hook running ${opts?.id}\n`)
-  const listOfReposArray = await listOfUserRepos(srmUserName)
+  const listOfReposArray = listOfUserRepos(srmUserName)
   await Promise.all(listOfReposArray.map((repo) => ensureRepo(repo)))
   // console.log(listOfReposArray)
   // await ensureRepo('test1')

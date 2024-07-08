@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager/1.0.31 darwin-arm64 node-v20.13.1
+super-repo-manager/1.0.32 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -32,6 +32,7 @@ USAGE
 * [`srm autocomplete [SHELL]`](#srm-autocomplete-shell)
 * [`srm help [COMMAND]`](#srm-help-command)
 * [`srm init`](#srm-init)
+* [`srm my [FILE]`](#srm-my-file)
 * [`srm plugins`](#srm-plugins)
 * [`srm plugins add PLUGIN`](#srm-plugins-add-plugin)
 * [`srm plugins:inspect PLUGIN...`](#srm-pluginsinspect-plugin)
@@ -116,7 +117,30 @@ EXAMPLES
   $ srm init
 ```
 
-_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.31/src/commands/init/index.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.32/src/commands/init/index.ts)_
+
+## `srm my [FILE]`
+
+run command on projects related to your username
+
+```
+USAGE
+  $ srm my [FILE] [-p a|b]
+
+ARGUMENTS
+  FILE  file to read
+
+FLAGS
+  -p, --project=<option>  <options: a|b>
+
+DESCRIPTION
+  run command on projects related to your username
+
+EXAMPLES
+  $ srm my
+```
+
+_See code: [src/commands/my/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.32/src/commands/my/index.ts)_
 
 ## `srm plugins`
 
@@ -417,7 +441,7 @@ ARGUMENTS
   ACTION  add|remove|update repository
 ```
 
-_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.31/src/commands/repo/index.ts)_
+_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.32/src/commands/repo/index.ts)_
 
 ## `srm repo add`
 
@@ -441,7 +465,7 @@ EXAMPLES
   $ srm repo add
 ```
 
-_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.31/src/commands/repo/add.ts)_
+_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.32/src/commands/repo/add.ts)_
 
 ## `srm update`
 
@@ -461,7 +485,7 @@ EXAMPLES
   $ srm update
 ```
 
-_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.31/src/commands/update/index.ts)_
+_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.32/src/commands/update/index.ts)_
 
 ## `srm version`
 
@@ -481,5 +505,5 @@ EXAMPLES
   $ srm version
 ```
 
-_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.31/src/commands/version/index.ts)_
+_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.32/src/commands/version/index.ts)_
 <!-- commandsstop -->

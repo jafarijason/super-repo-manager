@@ -7,8 +7,8 @@ import { SimpleGit, simpleGit } from 'simple-git';
 import { bashRunAndShowLogsPromise } from './bashUtils';
 
 
-export const getRepo = async (repo) => {
-    const srmObj = await currentSrmFileObj()
+export const getRepo = (repo) => {
+    const srmObj = currentSrmFileObj()
     const repoObj = _.get(srmObj, `repos[${repo}]`, {})
     return repoObj
 
@@ -95,7 +95,7 @@ export const ensureRepo = async (repo) => {
 
 
 
-        const srmObj = await currentSrmFileObj()
+        const srmObj = currentSrmFileObj()
         _.set(srmObj, `repos[${repo}]`, repoObj)
         await updateSrmFile(srmObj)
     } catch (error) {

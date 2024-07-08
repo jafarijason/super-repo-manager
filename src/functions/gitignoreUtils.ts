@@ -5,13 +5,13 @@ export const gitignorefile = '.gitignore'
 
 export const gitignorefileFilePath = path.resolve(gitignorefile);
 
-export const loadGitignore = async () => {
-    const gitignorefileContent = await fs.readFile(gitignorefileFilePath, 'utf8') || '';
+export const loadGitignore = () => {
+    const gitignorefileContent = fs.readFileSync(gitignorefileFilePath, 'utf8') || '';
     return gitignorefileContent
 }
 
-export const searchInGitIgnore = async (searchLine) => {
-    const gitignorefileContent = await loadGitignore()
+export const searchInGitIgnore = (searchLine) => {
+    const gitignorefileContent = loadGitignore()
     const lines = gitignorefileContent.split('\n');
     if (!lines.includes(searchLine)) {
         return false
@@ -19,9 +19,9 @@ export const searchInGitIgnore = async (searchLine) => {
     return true
 }
 
-export const ensureLineExistInGitIgnore = async (searchLine) => {
-    const checkIfLineExist = await searchInGitIgnore(searchLine)
+export const ensureLineExistInGitIgnore = (searchLine) => {
+    const checkIfLineExist = searchInGitIgnore(searchLine)
     if (!checkIfLineExist) {
-        await fs.appendFile(gitignorefileFilePath, `# .srm.yaml\n${searchLine}\n`)
+        fs.appendFileSync(gitignorefileFilePath, `# .srm.yaml\n${searchLine}\n`)
     }
 }

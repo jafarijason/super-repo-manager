@@ -1,6 +1,6 @@
 
 import util from 'util';
-import { exec } from 'child_process';
+import { exec, execSync } from 'child_process';
 import shelljs from 'shelljs';
 
 
@@ -26,6 +26,17 @@ export async function bashRunAndReturn({
         throw err;
     };
 
+}
+
+// Synchronous version of bashRunAndReturn
+export function bashRunAndReturnSync({ command }) {
+    try {
+        const result = execSync(command, { encoding: 'utf-8' }).trim();
+        return result.replace(/\n$/, '');;
+    } catch (error) {
+        console.error(`Error executing command: ${command}`, error);
+        return null;
+    }
 }
 
 

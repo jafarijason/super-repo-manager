@@ -50,7 +50,7 @@ const hook: Hook<'prerun'> = async function (opts) {
         reposInclude: []
       }
     )
-    await updateSrmFile(srmObj)
+    updateSrmFile(srmObj)
   }
 
   // srmVersion
