@@ -105,3 +105,10 @@ export const ensureRepo = async (repo) => {
     // console.log(status)
 
 }
+
+export const getListOfReposForGroup = (group) => {
+    const srmObj = currentSrmFileObj()
+    const groupObj = _.get(srmObj, `groups[${group}]`, {})
+    const reposArray = _.get(groupObj, `repos`, [])
+    return reposArray
+}

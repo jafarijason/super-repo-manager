@@ -33,6 +33,15 @@ export const listOfUserRepos = (srmUserName) => {
     return [...reposSet]
     // currentUser.
 }
+export const listOfUserGroups = (srmUserName) => {
+    const srmObj = currentSrmFileObj()
+    const users = srmObj.users
+    const currentUser = users[srmUserName]
+    if (!currentUser || _.isEmpty(currentUser)) {
+        console.warn(`user ${currentUser} is not exist`)
+    }
+    return currentUser.groupsInclude || []
+}
 
 export const listOfUserReposSync = () => {
 
@@ -45,6 +54,21 @@ export const listOfUserReposSync = () => {
     const srmUserName = gitUserEmail.replace(/@/g, '__').replace(/\./g, '-')
     const listOfReposArray = listOfUserRepos(srmUserName)
     return listOfReposArray || []
+
+    // return
+}
+
+export const listOfUserGroupsSync = () => {
+
+    const gitUserEmail = bashRunAndReturnSync({
+        command: 'git config user.email'
+    })
+
+    // return gitUserEmail
+
+    const srmUserName = gitUserEmail.replace(/@/g, '__').replace(/\./g, '-')
+    const listOfUserGroupsArray = listOfUserGroups(srmUserName)
+    return listOfUserGroupsArray || []
 
     // return
 }

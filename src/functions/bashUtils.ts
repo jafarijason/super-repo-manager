@@ -44,7 +44,9 @@ export function bashRunAndReturnSync({ command }) {
 
 
 export async function bashRunAndShowLogsPromise({
-    command, noError = false
+    command,
+    noError = false,
+    prefix = ''
 }) {
     await new Promise((resolve, reject) => {
         const child = shelljs.exec(
@@ -57,15 +59,27 @@ export async function bashRunAndShowLogsPromise({
         );
         child.stdout.on('data', function (data) {
             if (data.includes(' SUCCESS: ')) {
+                if (prefix) {
+                    console.log(prefix)
+                }
                 console.log(`Success ${data}`);
             } else {
+                if (prefix) {
+                    console.log(prefix)
+                }
                 console.log(data);
             }
         });
         child.stderr.on('data', function (data) {
             if (data.includes(' WARNING: ')) {
+                if (prefix) {
+                    console.log(prefix)
+                }
                 console.warn(data);
             } else {
+                if (prefix) {
+                    console.log(prefix)
+                }
                 console.error(data);
                 if (!noError) {
                     reject()
