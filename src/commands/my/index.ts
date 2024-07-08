@@ -23,7 +23,14 @@ export default class MyIndex extends Command {
     project: Flags.string({
       char: 'p',
       //@ts-ignore
-      options: listOfUserReposSync(),
+      // options: listOfUserReposSync(),
+      parse: (input) => {
+        const options = listOfUserReposSync();
+        if (!options.includes(input)) {
+          throw new Error(`Invalid value: ${input}. Must be one of: ${options.join(', ')}`);
+        }
+        return input;
+      },
     }),
   }
 
