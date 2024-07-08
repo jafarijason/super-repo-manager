@@ -55,7 +55,7 @@ export default class MyIndex extends Command {
 
     if (flags.project) {
       const repo = getRepo(flags.project)
-      const repoPath = `${repo['relative-path']}/${flags.project}`
+      const repoPath = `${repo['relative-path']}/${repo['repo-name']}`
       await bashRunAndShowLogsPromise({
         command: `cd ${repoPath}; ${argv.join(' ')}`,
         prefix: `####################${flags.project}####################`
@@ -70,7 +70,7 @@ export default class MyIndex extends Command {
       await Promise.all(
         groupReposList.map(async (repoKey) => {
           const repo = getRepo(repoKey)
-          const repoPath = `${repo['relative-path']}/${repoKey}`
+          const repoPath = `${repo['relative-path']}/${repo['repo-name']}`
           await bashRunAndShowLogsPromise({
             command: `cd ${repoPath}; ${argv.join(' ')}`,
             prefix: `####################${repoKey}####################`
@@ -83,7 +83,7 @@ export default class MyIndex extends Command {
     await Promise.all(
       listOfUserReposSync().map(async (repoKey) => {
         const repo = getRepo(repoKey)
-        const repoPath = `${repo['relative-path']}/${repoKey}`
+        const repoPath = `${repo['relative-path']}/${repo['repo-name']}`
         await bashRunAndShowLogsPromise({
           command: `cd ${repoPath}; ${argv.join(' ')}`,
           prefix: `####################${repoKey}####################`
