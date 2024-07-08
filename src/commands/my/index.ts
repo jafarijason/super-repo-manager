@@ -58,7 +58,8 @@ export default class MyIndex extends Command {
       const repoPath = `${repo['relative-path']}/${repo['repo-name']}`
       await bashRunAndShowLogsPromise({
         command: `cd ${repoPath}; ${argv.join(' ')}`,
-        prefix: `####################${flags.project}####################`
+        prefix: `####################${flags.project}####################`,
+        noError: true
       })
       return
     }
@@ -73,7 +74,8 @@ export default class MyIndex extends Command {
           const repoPath = `${repo['relative-path']}/${repo['repo-name']}`
           await bashRunAndShowLogsPromise({
             command: `cd ${repoPath}; ${argv.join(' ')}`,
-            prefix: `####################${repoKey}####################`
+            prefix: `####################${repoKey}####################`,
+            noError: true
           })
         })
       )
@@ -86,7 +88,8 @@ export default class MyIndex extends Command {
         const repoPath = `${repo['relative-path']}/${repo['repo-name']}`
         await bashRunAndShowLogsPromise({
           command: `cd ${repoPath}; ${argv.join(' ')}`,
-          prefix: `####################${repoKey}####################`
+          prefix: `####################${repoKey}####################`,
+          noError: true
         })
       })
     )

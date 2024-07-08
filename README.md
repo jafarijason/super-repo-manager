@@ -20,7 +20,7 @@ $ npm install -g super-repo-manager
 $ srm COMMAND
 running command...
 $ srm (--version)
-super-repo-manager/1.0.36 darwin-arm64 node-v20.13.1
+super-repo-manager/1.0.37 darwin-arm64 node-v20.13.1
 $ srm --help [COMMAND]
 USAGE
   $ srm COMMAND
@@ -117,7 +117,7 @@ EXAMPLES
   $ srm init
 ```
 
-_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.36/src/commands/init/index.ts)_
+_See code: [src/commands/init/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.37/src/commands/init/index.ts)_
 
 ## `srm my`
 
@@ -138,7 +138,7 @@ EXAMPLES
   $ srm my
 ```
 
-_See code: [src/commands/my/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.36/src/commands/my/index.ts)_
+_See code: [src/commands/my/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.37/src/commands/my/index.ts)_
 
 ## `srm plugins`
 
@@ -439,7 +439,7 @@ ARGUMENTS
   ACTION  add|remove|update repository
 ```
 
-_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.36/src/commands/repo/index.ts)_
+_See code: [src/commands/repo/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.37/src/commands/repo/index.ts)_
 
 ## `srm repo add`
 
@@ -463,7 +463,7 @@ EXAMPLES
   $ srm repo add
 ```
 
-_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.36/src/commands/repo/add.ts)_
+_See code: [src/commands/repo/add.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.37/src/commands/repo/add.ts)_
 
 ## `srm update`
 
@@ -483,7 +483,7 @@ EXAMPLES
   $ srm update
 ```
 
-_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.36/src/commands/update/index.ts)_
+_See code: [src/commands/update/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.37/src/commands/update/index.ts)_
 
 ## `srm version`
 
@@ -503,5 +503,5 @@ EXAMPLES
   $ srm version
 ```
 
-_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.36/src/commands/version/index.ts)_
+_See code: [src/commands/version/index.ts](https://github.com/jafarijason/super-repo-manager/blob/v1.0.37/src/commands/version/index.ts)_
 <!-- commandsstop -->
